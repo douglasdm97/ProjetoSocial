@@ -1,0 +1,28 @@
+<ion-view title="Cadastrar">
+<ion-content class="signup-page content-bg has-header" scroll="false" >
+<div class="list">
+  <label class="item item-input username">
+    <input type="text" placeholder="Usuario" ng-model="user.username">
+  </label>
+
+  <label class="item item-input email">
+    <input type="text" placeholder="Email" ng-model="user.email">
+  </label>
+
+  <label class="item item-input lock">
+    <input type="password" placeholder="Senha" ng-model="user.password">
+  </label>
+</div>
+
+<button class="button button-blue" ng-click="cadastrar()">
+Cadastrar
+</button>
+<button class="button button-full button-twitter hide-on-keyboard-open" ng-click="authenticate('twitter')">
+        Entrar com  Twitter
+      </button>
+
+      <button class="button button-full button-instagram hide-on-keyboard-open" ng-click="authenticate('instagram')">
+         Entrar com  Instagram
+      </button>
+</ion-content>
+</ion-view>

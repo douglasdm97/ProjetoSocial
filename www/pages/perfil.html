@@ -1,0 +1,31 @@
+<ion-view view-title="Perfil">
+<ion-content class="padding">
+
+
+<div class="profile-menu-wrapper">
+	<div class="list">
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Usuario</span>
+			<input type="text" placeholder="Usuario" ng-model="user.username" />
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Nome</span>
+			<input type="text" placeholder="Escreve seu nome" ng-model="user.name" />
+		</label>
+		<label class="item item-input item-stacked-label">
+			<span class="input-label">Email</span>
+			<input type="text" placeholder="ex: joao@gmail.com" ng-model="user.website"/>
+		</label>
+	</div>
+	<button class="button button-blue button-full " ng-click="cadastrar()">
+		Alterar Dados
+	</button>
+
+	<Br>
+		<button class="button button-stable button-full " ng-click="cadastrar()">
+			Alterar sua Senha
+		</button>
+	</div>
+
+</ion-content>
+</ion-view>
