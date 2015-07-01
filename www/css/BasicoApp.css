@@ -7456,7 +7456,9 @@ ul.authorConnectIcons li {
 
   .bar.bar-dark-ui, .bar-dark-ui.bar {
     background: #383a4c;
-    border-width: 0px; }
+    border-width: 0px; 
+    border-bottom: 1px solid #3462B5;
+}
     .bar.bar-dark-ui .title, .bar.bar-dark-ui .bar-dark-ui.bar {
       color: #ffffff; }
     .bar.bar-dark-ui .button.button-icon, .bar.bar-dark-ui .bar-dark-ui.bar, .bar.bar-dark-ui .button-icon.button, .bar.bar-dark-ui .button.back-button, .bar.bar-dark-ui .bar-dark-ui.bar, .bar.bar-dark-ui .back-button.button {

@@ -4,7 +4,7 @@
 	padding-bottom: 10px!important;
 	min-height: 56px;
 }
-.item {
+.inicio .item {
 	-webkit-animation-name: entrando;
     -webkit-animation-iteration-count: 1;
     -webkit-animation-timing-function: ease-in;
