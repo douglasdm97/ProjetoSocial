@@ -1600,46 +1600,6 @@ a.subdued {
 .popover-arrow {
   display: none; }
 
-.platform-ios .popover {
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.08); }
-.platform-ios .popover, .platform-ios .popover .bar-header {
-  border-radius: 10px; }
-.platform-ios .popover .scroll-content {
-  margin: 8px 0;
-  border-radius: 10px; }
-.platform-ios .popover .scroll-content.has-header {
-  margin-top: 0; }
-.platform-ios .popover-arrow {
-  position: absolute;
-  top: -17px;
-  left: 43%;
-  display: block;
-  width: 30px;
-  height: 19px;
-  overflow: hidden; }
-  .platform-ios .popover-arrow:after {
-    position: absolute;
-    top: 12px;
-    left: 5px;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 3px;
-    content: '';
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-
-.platform-android .popover {
-  background-color: #fafafa;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
-  margin-top: -32px; }
-  .platform-android .popover .item {
-    border-color: #fafafa;
-    background-color: #fafafa;
-    color: #4d4d4d; }
-.platform-android .popover-backdrop, .platform-android .popover-backdrop.active {
-  background-color: transparent; }
 
 .popover-open {
   pointer-events: none; }
@@ -5362,24 +5322,6 @@ a.button {
     font-family: 'Roboto', $font-family-base;
   }
   */
-.platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) {
-  height: 80px; }
-  .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader).item-input-inset .item-input-wrapper {
-    margin-top: 19px !important; }
-  .platform-ios.platform-cordova:not(.fullscreen) .bar-header:not(.bar-subheader) > * {
-    margin-top: 20px; }
-.platform-ios.platform-cordova:not(.fullscreen) .tabs-top > .tabs, .platform-ios.platform-cordova:not(.fullscreen) .tabs.tabs-top {
-  top: 80px; }
-.platform-ios.platform-cordova:not(.fullscreen) .has-header, .platform-ios.platform-cordova:not(.fullscreen) .bar-subheader {
-  top: 80px; }
-.platform-ios.platform-cordova:not(.fullscreen) .has-subheader {
-  top: 140px; }
-.platform-ios.platform-cordova:not(.fullscreen) .has-tabs-top {
-  top: 129px; }
-.platform-ios.platform-cordova:not(.fullscreen) .has-header.has-subheader.has-tabs-top {
-  top: 189px; }
-.platform-ios.platform-cordova.status-bar-hide {
-  margin-bottom: 20px; }
 
 @media (orientation: landscape) {
   .platform-ios.platform-browser.platform-ipad {
