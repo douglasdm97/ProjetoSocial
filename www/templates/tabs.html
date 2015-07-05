@@ -10,7 +10,7 @@ navigation history that also transitions its views in and out.
 </ion-nav-bar> 
 
 
-<ion-tabs class="tabs-striped tabs-background-positive tabs-color-light ">
+<ion-tabs class="tabs-striped tabs-background-positive tabs-color-light " ng-controller="tabs">
 
   <!-- Dashboard Tab -->
   <ion-tab title="Inicio" icon-off="ion-ios-home" icon-on="ion-ios-home" href="#/auth/inicio">
@@ -26,7 +26,7 @@ navigation history that also transitions its views in and out.
   </ion-tab>
 
   <!-- Account Tab -->
-  <ion-tab title="Account" icon-off="ion-android-camera" icon-on="ion-android-camera" href="#/tab/account">
+  <ion-tab icon-off="ion-android-camera personalizado" icon-on="ion-android-camera" on-select="camera()">
     <ion-nav-view name="tab-account"></ion-nav-view>
   </ion-tab>
 

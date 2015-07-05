@@ -1,0 +1,30 @@
+<ion-modal-view>
+<ion-header-bar class="bar-dark">
+<div class="buttons">
+	<button class="button button-clear button-icon icon ion-close-round button-light" ng-click="doSomething()"></button>
+</div>
+<h1 class="title">Enviar Foto</h1>
+</ion-header-bar>
+<ion-content class="modalfoto">
+<img style="width:100%" src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11377538_1601810536741533_1962895443_n.jpg" />
+<div class="padding">
+	<button class="button icon-left ion-location">Pegar localização</button>
+</div>
+<ul class="list pretinha">
+
+	<li class="item item-checkbox" ng-repeat="i in [1,2,3,4,5]">
+		<label class="checkbox">
+			<input type="checkbox">
+		</label>
+		Categoria
+	</li>
+
+
+</ul>
+<div class="padding">
+	<button class="button button-full button-dark">
+		Enviar
+	</button>
+</div>
+</ion-content>
+</ion-modal-view>

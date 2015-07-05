@@ -1,14 +1,14 @@
 /* Empty. Add your own CSS if you like */
 .item.item-avatar {
-	padding-top: 17px!important;
+	padding-top: 10px!important;
 	padding-bottom: 10px!important;
 	min-height: 56px;
 }
 .inicio .item {
 	-webkit-animation-name: entrando;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 1s;
 }
 
 img {
@@ -24,9 +24,9 @@ img {
 
 .footer_img  img{
 	-webkit-animation-name: entrando;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 1s;
 	-webkit-filter: blur(7px);
 	width: 104%;
 	margin-left: -3px;
@@ -43,9 +43,9 @@ img {
 }
 .dados {
 	-webkit-animation-name: entrando;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in;
+	-webkit-animation-duration: 1s;
 	position: absolute;
 	z-index: 2;
 	margin: 13px;
@@ -64,8 +64,8 @@ button.like {
 	border-radius: 4px;
 	border-bottom: 1px solid #A8A8A8;
 	color: #303030;
-	  margin-right: 10px;
-	  float: left;
+	margin-right: 10px;
+	float: left;
 }
 
 .like:before {
@@ -75,34 +75,161 @@ button.like {
 }
 
 .like.red span {
-    color: #cb3939;
+	color: #cb3939;
 }
 
 .like span {
-    display: inherit;
-    margin-left: 15px;
-    color: #5087d4;
-    font-weight: bold;
+	display: inherit;
+	margin-left: 15px;
+	color: #5087d4;
+	font-weight: bold;
 }
 .item h2 {
-  position: absolute;
-  color: #387EF5;
-  font-weight: bold;
-  font-size: 18px!important;
+	position: absolute;
+	color: #387EF5;
+	font-weight: bold;
+	font-size: 18px!important;
 }
 .item-avatar p {
-    float: right;
+	float: right;
 }
 
 /*Animacao entrada*/
 @-webkit-keyframes entrando {
-    0% {
-       opacity: 0;
-    }
-    60% {
-       opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+	0% {
+		opacity: 0;
+	}
+	60% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.comentarios p{
+	margin: 15px;
+}
+.comentarios p a{
+	color: #3A60A6;
+	font-weight: bold;
+}
+.categorias h3{
+	color: #3A60A6;
+	margin: 15px;
+	margin-top: 15px!important;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	display: inline-flex;
+}
+.categorias p{
+	margin: 15px 0px;
+	color: #555;
+	display: initial;
+	padding-left: 10p;
+}
+.categorias i{
+	margin: 0px 3px;
+	font-size: 16px;
+	color: #C2C2C2;
+}
+.categorias a {
+    margin-left: 10px;
+      display: inline-block;
+    line-height: 27px;
+}
+
+.categorias a:after {
+    content: ',';
+}
+.comentar {
+    height: 30px!important;
+    min-height: 30px!important;
+    line-height: 30px!important;
+    font-size: 13px!important;
+    margin: 10px 15px!important;
+    margin-top: 0px!important;
+    border: 0px!important;
+    background-color: #D7D7D7!important;
+}
+
+.comentar:before {
+    font-size: 20px!important;
+    line-height: 30px!important;
+}
+
+.categorias {
+    border-bottom: 1px solid #D5D5D5;    padding-bottom: 5px;    margin-bottom: 0px;
+}
+.item h3 {
+    margin-top: 18px!important;
+    font-size: 12px!important;
+    color: #838383;
+    position: absolute;
+}
+.foto {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #387EF5;
+    padding-bottom: 20px;
+}
+.foto {
+	background: #387ef5; /* Old browsers */
+background: -moz-linear-gradient(top, #387ef5 0%, #005df4 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#387ef5), color-stop(100%,#005df4)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #387ef5 0%,#005df4 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #387ef5 0%,#005df4 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #387ef5 0%,#005df4 100%); /* IE10+ */
+background: linear-gradient(to bottom, #387ef5 0%,#005df4 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#387ef5', endColorstr='#005df4',GradientType=0 );
+}
+
+.foto img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 3px 2px rgba(79, 79, 79, 0.46);
+}
+
+.foto a {
+    display: table;
+    padding: 8px 16px;
+    margin: -8px auto;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    border: solid 1px #fff;
+}
+.personalizado {
+	background-color: rgba(0, 0, 0, 0.3);
+	border-top: 0px!important;
+	margin-top: -2px;
+  
+  
+  
+  
+	height: auto!important;
+  color: #FFFFFF;
+  
+	display: block!important;
+  
+  
+	line-height: 47px;
+}
+.modalfoto {
+background: #333; /* Old browsers */
+
+}
+.button-clear {
+  color: #fff!important;
+}
+.pretinha .item {
+    background-color: #1F1F1F;
+    border: 0px;
+    border-bottom: 2px solid #151515;
+    color: #C3C3C3;
 }
