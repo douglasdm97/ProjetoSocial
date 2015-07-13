@@ -1,2 +1,11 @@
 /* Feito por doga10 */
-
+.btn-face {
+  background-color: rgb(71, 99, 158);
+  color: #fff;
+  border: none;
+}
+.btn-insta {
+  background-color: #125688;
+  color: #fff;
+  border: none;
+}
