@@ -1,16 +1,8 @@
-angular.module('starter.controllers', [])
+controllers = angular.module('starter.controllers', []);
 
-.controller('MainController', function($scope, $state, $ionicLoading, $ionicModal) {
+controllers.controller('MainController', function($scope, $state, $ionicLoading, $ionicModal) {
 
-  $scope.entrar = function(state){
-    $ionicLoading.show();
-    setTimeout(function(){
 
-      $ionicLoading.hide();
-      return $state.go('auth.inicio');
-
-    }, 1500);
-  };
   $scope.cadastrar = function(state){
     $ionicLoading.show();
     setTimeout(function(){
