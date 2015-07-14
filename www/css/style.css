@@ -210,8 +210,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#387ef5', end
 	margin-top: -2px;
   
   
-  
-  
+ 
 	height: auto!important;
   color: #FFFFFF;
   
@@ -232,4 +231,15 @@ background: #333; /* Old browsers */
     border: 0px;
     border-bottom: 2px solid #151515;
     color: #C3C3C3;
+}
+
+.btn-face {
+  background-color: rgb(71, 99, 158);
+  color: #fff;
+  border: none;
+}
+.btn-insta {
+  background-color: #125688;
+  color: #fff;
+  border: none;
 }
