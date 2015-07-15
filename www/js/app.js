@@ -71,6 +71,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: "pages/noAuth/inicio.html",
     controller: 'AuthController'
   })
+  .state('cadastrar', {
+    url: '/noAuth/cadastrar',
+    templateUrl: "pages/noAuth/cadastrar.html",
+    controller: 'CadastroController'
+  })
 
   // Retonra a Route Inicial
   $urlRouterProvider.otherwise('/noAuth/inicio');

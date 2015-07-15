@@ -2,27 +2,20 @@
 <ion-content class="signup-page content-bg has-header" scroll="true" >
 <div class="list">
   <label class="item item-input username">
-    <input type="text" placeholder="Usuario" ng-model="user.username">
+    <input type="text" placeholder="Usuario" ng-model="username">
   </label>
 
   <label class="item item-input email">
-    <input type="text" placeholder="Email" ng-model="user.email">
+    <input type="text" placeholder="Email" ng-model="email">
   </label>
 
   <label class="item item-input lock">
-    <input type="password" placeholder="Senha" ng-model="user.password">
+    <input type="password" placeholder="Senha" ng-model="password">
   </label>
 </div>
 
-<button class="button button-blue" ng-click="cadastrar()">
+<button class="button button-blue" ng-click="cadastro(username, password, email)">
 Cadastrar
 </button>
-<button class="button button-full  hide-on-keyboard-open" ng-click="authenticate('twitter')">
-       <span class="ion-social-facebook-outline"></span> Cadastrar com  Facebook
-      </button>
-
-      <button class="button button-full hide-on-keyboard-open" ng-click="authenticate('instagram')">
-        <span class="ion-social-instagram-outline"></span> Cadastrar com  Instagram
-      </button>
 </ion-content>
 </ion-view>

@@ -10,17 +10,39 @@ controller('AuthController', function($scope, $state, $ionicLoading, $ionicModal
 	//Facebook SDK
 	$scope.facebook = function(){
 
+		$ionicLoading.show();
 		// Reliza Login com o  Facebook
 
 		facebookConnectPlugin.login(['email'], function(response) {
 		});
-		facebookConnectPlugin.api( "me/?fields=id,name,email,picture", ["user_photos"], function (dados) { 
-			$scope.AutenticaParse(dados.email, dados.email.substring(0,8),dados.name, dados.picture.data.url);
-			
-		}, function (dados) { 
-			$scope.erro();
-			
-		}); 
+		//Pega o Status do Login
+		facebookConnectPlugin.getLoginStatus( 
+			function (response) { 
+				// Faz a Data ficar no formato perfeitoOoO
+				var data = new Date(new Date().getTime() + response['authResponse']['expiresIn'] * 1000)
+
+				Parse.FacebookUtils.logIn({
+
+					"id": response['authResponse']['userID']+"",
+					"access_token": response['authResponse']['accessToken'],
+					"expiration_date": data
+				}, {
+					success: function(user) {
+						$ionicLoading.hide();
+						// Função caso tenha logado tanto no face quanto no Parse
+						if(user.get("completo_facebook") != 1) {
+							$scope.Redirect('#/noAuth/cadastrar');
+						}else {
+							$scope.Redirect('#/auth/inicio');
+						}
+
+						
+
+					}});
+			});
+
+
+		
 
 		
 		
@@ -30,25 +52,19 @@ controller('AuthController', function($scope, $state, $ionicLoading, $ionicModal
 
 
 	//Autentica no Parse
-	$scope.AutenticaParse = function (email, senha, nome, img) {
+	$scope.AutenticaParse = function (id, email, nome, img, access_token) {
 
-		alert('Supostamente Auntenticado '+email +' - '+senha+' - '+ nome +' - '+img );
-		var user = new Parse.User();
-		user.set("username", email);
-		user.set("password", senha);
-		user.set("img", img);
 
-		//Cadastra no Parse
-		user.signUp(null, {
-			success: function(user) {
-			  return $state.go('auth.inicio');
-			},
-			error: function(user, error) {
-			    $scope.erro();
-			}
-			});
+
 
 	};
+
+
+//Redireciona a page via angular
+$scope.Redirect = function (rota) {
+	window.location.href= rota;
+};
+
 
 	//Mensagem Erro
 	$scope.erro = function () {
