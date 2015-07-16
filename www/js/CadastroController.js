@@ -30,6 +30,18 @@ controller('CadastroController', function($scope, $state, $ionicLoading, $ionicM
 
 		};
 
+
+		
+
 	}
+
+
+		$scope.doFaceCad = function(){
+			alert('Facebook');
+		}
+
+		$scope.doGoogleCad = function(){
+			alert('google');
+		}
 
 });

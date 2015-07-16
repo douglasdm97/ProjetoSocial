@@ -69,12 +69,22 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   .state('inicio', {
     url: '/noAuth/inicio',
     templateUrl: "pages/noAuth/inicio.html",
-    controller: 'AuthController'
+    controller: 'NoAuthController'
   })
   .state('cadastrar', {
     url: '/noAuth/cadastrar',
     templateUrl: "pages/noAuth/cadastrar.html",
     controller: 'CadastroController'
+  })
+    .state('logar', {
+    url: '/noAuth/entrar',
+    templateUrl: "pages/noAuth/entrar.html",
+    controller: 'AuthController'
+  })
+      .state('confirmar', {
+    url: '/noAuth/confirmar',
+    templateUrl: "pages/noAuth/confrimar.html",
+    controller: 'ConfirmController'
   })
 
   // Retonra a Route Inicial
