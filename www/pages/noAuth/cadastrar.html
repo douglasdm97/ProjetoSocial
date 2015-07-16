@@ -2,7 +2,7 @@
 <ion-content class="signup-page content-bg has-header" scroll="true" >
 <div class="list">
   <label class="item item-input username">
-    <input type="text" placeholder="Usuario" ng-model="username">
+    <input type="text" placeholder="Nome" ng-model="username">
   </label>
 
   <label class="item item-input email">
@@ -12,9 +12,13 @@
   <label class="item item-input lock">
     <input type="password" placeholder="Senha" ng-model="password">
   </label>
+
+    <label class="item item-input telephone">
+    <input type="text" placeholder="Celular" ng-model="celular">
+  </label>
 </div>
 
-<button class="button button-blue" ng-click="cadastro(username, password, email)">
+<button class="button button-blue" ng-click="cadastro(username, password, email,celular)">
 Cadastrar
 </button>
 
@@ -25,6 +29,9 @@ Cadastrar
        <button class="button button-full btn-google hide-on-keyboard-open" ng-click="doGoogleCad()">
          <span class="ion-social-google-outline"></span> Cadastrar com  Google
       </button>
+
+
+
 
 </ion-content>
 </ion-view>

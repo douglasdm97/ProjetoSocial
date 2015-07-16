@@ -83,11 +83,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   })
       .state('confirmar', {
     url: '/noAuth/confirmar',
-    templateUrl: "pages/noAuth/confrimar.html",
+    templateUrl: "pages/noAuth/confirmar.html",
     controller: 'ConfirmController'
   })
 
   // Retonra a Route Inicial
-  $urlRouterProvider.otherwise('/noAuth/inicio');
+  $urlRouterProvider.otherwise('/noAuth/inicio')
 
 });
