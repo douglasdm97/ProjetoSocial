@@ -1,7 +1,9 @@
 // Doug App
 
 
+
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -16,6 +18,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
+
 
 .config(function($stateProvider, $urlRouterProvider) {
 

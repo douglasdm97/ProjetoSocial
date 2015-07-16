@@ -1,12 +1,11 @@
 // Controller Do Cadastro
 controllers.
 controller('CadastroController', function($scope, $state, $ionicLoading, $ionicModal, $ionicPopup) {
-
+  Parse.initialize("CpHpZpZg3FXuBG7rfg4LoFAvKRPy7YiLDNmX1YBl", "eY3NCOFRwhleMKGZ2uaBZG4H9quRowyGJW4UQaGY");
 
 	
-	Parse.initialize("CpHpZpZg3FXuBG7rfg4LoFAvKRPy7YiLDNmX1YBl", "eY3NCOFRwhleMKGZ2uaBZG4H9quRowyGJW4UQaGY");
-
-	var user = new Parse.User();
+var user = new Parse.User();
+	
 
 
 
@@ -56,6 +55,7 @@ $scope.Redirect = function (rota) {
 
 
 	$scope.cadastro = function(nome, password, email, celular){
+
 		$scope.username=email;
 		$scope.password=password;
 
@@ -101,6 +101,18 @@ $scope.Redirect = function (rota) {
 
 	$scope.doFaceCad = function(){
 		alert('Facebook');
+		Parse.FacebookUtils.logIn(null, {
+		  success: function(user) {
+		    if (!user.existed()) {
+		      alert("User signed up and logged in through Facebook!");
+		    } else {
+		      alert("User logged in through Facebook!");
+		    }
+		  },
+		  error: function(user, error) {
+		    alert("User cancelled the Facebook login or did not fully authorize.");
+		  }
+		});
 
 	}
 
