@@ -9,12 +9,13 @@ controller('ConfirmController', function($scope, $state, $ionicLoading, $ionicMo
 	if(User) {
 
 
-		$scope.cadastro = function(username, password, email){
+		$scope.cadastro = function(username, password, email, celular){
 			$ionicLoading.show();
 			User.set("completo_facebook", 1);
 			User.set("username", username);
 			User.set("password", password);
 			User.set("email", email);
+			User.set("phonenumber", celular);
 			User.save(null,{
 				success: function(User) {
 

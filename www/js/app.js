@@ -59,7 +59,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     views: {
       'perfil': {
         templateUrl: 'pages/perfil.html',
-        controller: 'MainController'
+        controller: 'PerfilController'
       }
     }
   })
