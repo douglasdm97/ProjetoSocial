@@ -5,14 +5,38 @@ controller('AuthController', function($scope, $state, $ionicLoading, $ionicModal
 	//Inicia o Parse
 	Parse.initialize("DGGAyXG486w5hxkzdlX38yqbqfnKb9gywUXGFunJ", "WaKyF5ZAxo9zkieeDENUPxPlXKQd9CBCZtc6VRPW");
 
+//Entrar com o parse
+$scope.entrar = function (username, password) {
+	if (!username) {$scope.showAlert('Por favor Informe o seu usuario!');return false;};
+	if (!password) {$scope.showAlert('Por favor Informe a sua senha!');return false;};
 
+	$ionicLoading.show();
+	Parse.User.logIn(username, password, {
+		success: function(user) {
+			$ionicLoading.hide();
+			return $state.go('auth.inicio');
+		},
+		error: function(user, error) {
+			$ionicLoading.hide();
+			$scope.showAlert('usuario ou senha errados!');
+		}
+	});
+};
+//Alert
+$scope.showAlert = function(error,cod) {
+	var alertPopup = $ionicPopup.alert({
+		title: "ERRO",
+		template: error
+	});
+	alertPopup.then(function(res) {
 
+	});
+};
 	//Facebook SDK
 	$scope.facebook = function(){
 
 		$ionicLoading.show();
 		// Reliza Login com o  Facebook
-
 		facebookConnectPlugin.login(['email'], function(response) {
 		});
 		//Pega o Status do Login
@@ -31,7 +55,7 @@ controller('AuthController', function($scope, $state, $ionicLoading, $ionicModal
 						$ionicLoading.hide();
 						// Função caso tenha logado tanto no face quanto no Parse
 						if(user.get("completo_facebook") != 1) {
-							$scope.Redirect('#/noAuth/cadastrar');
+							$scope.RedirectState('confirmar');
 						}else {
 							$scope.Redirect('#/auth/inicio');
 						}
@@ -51,18 +75,14 @@ controller('AuthController', function($scope, $state, $ionicLoading, $ionicModal
 	//Facebook SDK
 
 
-	//Autentica no Parse
-	$scope.AutenticaParse = function (id, email, nome, img, access_token) {
-
-
-
-
-	};
-
 
 //Redireciona a page via angular
 $scope.Redirect = function (rota) {
 	window.location.href= rota;
+};
+//Redireciona a page via angular
+$scope.RedirectState = function (rota) {
+	return $state.go(rota);
 };
 
 

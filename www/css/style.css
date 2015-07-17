@@ -243,9 +243,6 @@ background: #333; /* Old browsers */
   color: #fff;
   border: none;
 }
-.has-header {
-  top: 0px; 
-}
 .btn-google {
   background-color: rgb(166, 51, 51);
   color: #fff;

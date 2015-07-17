@@ -3,24 +3,23 @@
 
         <div class="list">
         <label class="item item-input username">
-          <input type="text" placeholder="Usuario" ng-model="user.username">
+          <input type="text" placeholder="Usuario" ng-model="username">
         </label>
 
         <label class="item item-input lock">
-          <input type="password" placeholder="Senha" ng-model="user.password">
+          <input type="password" placeholder="Senha" ng-model="password">
         </label>
       </div>
     
-      <button class="button button-full button-blue" ng-click="entrar()">
+      <button class="button button-full button-blue" ng-click="entrar(username, password)">
         Entrar
       </button>
 
-      <button class="button button-full btn-face hide-on-keyboard-open" ng-click="authenticate('facebook')">
+      <button class="button button-full btn-face hide-on-keyboard-open" ng-click="facebook()">
          <span class="ion-social-facebook-outline"></span> Entrar com  Facebook
       </button>
-     <!--   <button class="button button-full btn-google hide-on-keyboard-open" ng-click="authenticate('google')">
-         <span class="ion-social-google-outline"></span> Entrar com  Google
-      </button> -->
+
+
 
 
 

@@ -1,19 +1,30 @@
-<ion-view title="Confirmar Numero">
+<ion-view title="Mais alguns dados">
 <ion-content class="signup-page content-bg has-header" scroll="true" >
+<div class="list">
+  <label class="item item-input username">
+    <input type="text" placeholder="@username" ng-model="username">
+  </label>
 
-        <div class="list">
-        <label class="item item-input numconfirm">
-          <input type="text" placeholder="Codigo" ng-model="user.numconfirm">
-        </label>
+  <label class="item item-input email">
+    <input type="text" placeholder="Email" ng-model="email">
+  </label>
 
-       
-    
-      <button class="button button-full button-blue" ng-click="confirmar()">
-        Confirmar
-      </button>
+  <label class="item item-input lock">
+    <input type="password" placeholder="Senha" ng-model="password">
+  </label>
 
-    
-  
-  
-  </ion-content>
+  <label class="item item-input telephone">
+    <input type="text" placeholder="Celular" ng-model="celular">
+  </label>
+</div>
+
+<button class="button button-blue" ng-click="cadastro(username, password, email,celular)">
+  Cadastrar
+</button>
+
+
+
+
+
+</ion-content>
 </ion-view>

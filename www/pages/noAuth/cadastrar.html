@@ -1,4 +1,4 @@
-<ion-view title="Cadastrar">
+<ion-view title="Cadastro">
 <ion-content class="signup-page content-bg has-header" scroll="true" >
 <div class="list">
   <label class="item item-input username">
@@ -13,23 +13,19 @@
     <input type="password" placeholder="Senha" ng-model="password">
   </label>
 
-    <label class="item item-input telephone">
+  <label class="item item-input telephone">
     <input type="text" placeholder="Celular" ng-model="celular">
   </label>
 </div>
 
 <button class="button button-blue" ng-click="cadastro(username, password, email,celular)">
-Cadastrar
+  Finalizar Cadastro
+</button>
+<button ng-controller="AuthController" class="button button-full btn-face hide-on-keyboard-open" ng-click="facebook()">
+<span class="ion-social-facebook-outline"></span> Entrar com  Facebook
 </button>
 
 
-      <button class="button button-full btn-face hide-on-keyboard-open" ng-click="doFaceCad()">
-         <span class="ion-social-facebook-outline"></span> Cadastrar com  Facebook
-      </button>
-    <!--    <button class="button button-full btn-google hide-on-keyboard-open" ng-click="doGoogleCad()">
-         <span class="ion-social-google-outline"></span> Cadastrar com  Google
-      </button>
- -->
 
 
 

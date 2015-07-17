@@ -2,7 +2,7 @@
 
 
 
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.router'])
 
 
 .run(function($ionicPlatform) {
@@ -45,9 +45,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views: {
       'inicio': {
         templateUrl: 'pages/inicio.html',
-        controller: 'MainController'
+        controller: 'InicioController'
       }
     }
+  })
+  .state('verificar', {
+    url: '/verificar',
+    templateUrl: "pages/verificar.html",
+    controller: 'VerificarController'
   })
   .state('auth.perfil', {
     url: '/perfil',
