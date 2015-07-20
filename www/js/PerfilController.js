@@ -7,16 +7,22 @@ var testefile='' ;
 
 	User = Parse.User.current();
 
-	$scope.username = User.get("username");
-	$scope.nome = User.get("nome");
-	$scope.email = User.get("email");
-	fotoperfil = User.get("profile_pic");
+		$scope.refreshprofilepic = function (){
+		fotoperfil = User.get("profile_pic");
 	if (!fotoperfil) {
 		$scope.pic_file = "img/no-profile-image.jpg";
 	}else{
 		$scope.pic_file = fotoperfil._url;
 	}
-	
+	}
+
+	$scope.username = User.get("username");
+	$scope.nome = User.get("nome");
+	$scope.email = User.get("email");
+	$scope.refreshprofilepic();
+
+
+
 
 
 	$scope.submit = function (username, nome, email) {
@@ -36,17 +42,26 @@ var testefile='' ;
 	};
 
 
-	$scope.upload_pic_profile = function(){
-		alert();
-	}
+
 
     $scope.uploadImage = function () {
+    	$ionicLoading.show();
        
     	var fileUploadControl = $("#pic_file")[0];
 
     	if (fileUploadControl.files.length > 0) {
 		  var file = fileUploadControl.files[0];
 		  testefile = file;
+		  var type = file.type;
+		  if ((type !=="image/png") && (type !=="image/jpeg") ) {
+		  	var alertPopup = $ionicPopup.alert({
+					title: 'Tipo e Arquivo invalido '+type
+				});
+			$ionicLoading.hide();
+		  	return false;
+		  };
+
+		  console.log(testefile);
 		  var name = testefile.name;
 		  
 
@@ -55,18 +70,19 @@ var testefile='' ;
 		  User.set('profile_pic', parseFile);
 		User.save(null, {
 			success: function (){
+				$ionicLoading.hide();
 				var alertPopup = $ionicPopup.alert({
 					title: "Foto de Perfil Atualizada!"
 				});
 				alertPopup.then(function(res) {
-					$ionicHistory.goBack();
+					$scope.refreshprofilepic();
+
 				});
 			}
 		});
 
 
 		}
-
 
 
     }

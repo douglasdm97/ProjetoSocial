@@ -41,13 +41,14 @@
     },
     "com.phonegap.plugins.facebookconnect": {
         "source": {
-            "type": "registry",
-            "id": "com.phonegap.plugins.facebookconnect"
+            "type": "git",
+            "url": "https://github.com/Wizcorp/phonegap-facebook-plugin",
+            "subdir": "."
         },
         "is_top_level": true,
         "variables": {
             "APP_ID": "1625088031103156",
-            "APP_NAME": "projetosocial_ionic"
+            "APP_NAME": "ProjetoSocial"
         }
     }
 }
