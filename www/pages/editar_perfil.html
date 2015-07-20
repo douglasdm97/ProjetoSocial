@@ -6,9 +6,14 @@ Voltar
 </ion-nav-bar> 
 <ion-content >
 <div class="foto"> 
-	<img src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11377538_1601810536741533_1962895443_n.jpg" />
+<label for="pic_file">
+	<img src="{{pic_file}}" />
 	<div style="clear:both"> </div>
-	<a href="">Alterar Foto</a>
+	
+	<span type="button" class="button button-small">Aterar Foto</span>
+		<input name='file'  ng-model="image" onchange="angular.element(this).scope().uploadImage()"  class='hidde' type="file" id='pic_file' >
+	</label>
+	
 </div>
 
 <div class="profile-menu-wrapper">

@@ -327,3 +327,12 @@ i.action-notify.icon.ion-checkmark {
   text-decoration: none !important;
   top: 5px;
 }
+
+/*JEANDRO ADD 19/07/2015*/
+
+.hidde {
+  display: none;
+}
+
+
+/*FIM 19/07/2015*/
