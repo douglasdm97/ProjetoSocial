@@ -1,0 +1,52 @@
+<ion-view view-title="Perfil">
+
+<ion-content >
+<div class="header-profile"> 
+<div class="row">
+ <div class="col col-33">
+ 	<div class="profile-pic">
+ 		  <img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpa1/v/t1.0-9/11377324_969620706391847_2748731024739924989_n.jpg?oh=e3f15bca00cbffdf51873259ba496c24&oe=5650CCFF&__gda__=1447993671_9284e1fdbca0f3d2745851c8e0343b36" alt="">
+ 	</div>
+ 	<span class="username">{{nome}}</span>
+ </div>
+ <div class="col col-66">
+ 	<div class="row">
+ 		<div class="verticallist">
+ 			<div class="list-profile-stats">
+ 				
+ 			</div>
+ 		</div>
+ 	</div>
+ 	<div class="row">
+ 	<div class="center">
+ 		<button ng-click="page('auth.editar_perfil')" class="button button-small button-light medium-gray profile-button-custom">
+		  EDITAR SEU PERFIL
+		</button><BR>
+    <button ng-click="sair()" class="button button-small button-red medium-gray profile-button-custom">
+      SAIR
+    </button>
+ 	</div>
+ 		
+ 	</div>
+ </div>
+</div>
+</div>
+
+
+<div class="profile-menu-wrapper">
+<div class="tabs tabs-profile-options">
+  <a class="tab-item">
+    <i class="icon ion-grid"></i>
+  </a>
+  <a class="tab-item">
+     <i class="icon ion-happy-outline"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-sad-outline"></i>
+  </a>
+</div>
+	
+		
+</div>
+</ion-content>
+</ion-view>

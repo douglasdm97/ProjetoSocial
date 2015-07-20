@@ -40,7 +40,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   .state('auth.inicio', {
 
-  
+
     url: '/inicio',
     views: {
       'inicio': {
@@ -54,24 +54,44 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     templateUrl: "pages/verificar.html",
     controller: 'VerificarController'
   })
-  .state('auth.perfil', {
-    url: '/perfil',
+  .state('auth.myperfil', {
+    url: '/myperfil',
     views: {
       'perfil': {
-        templateUrl: 'pages/perfil.html',
+        templateUrl: 'pages/my_perfil.html',
         controller: 'PerfilController'
       }
     }
   })
-  .state('auth.amigos', {
-    url: '/amigos',
+  .state('auth.editar_perfil', {
+   url: '/editar_perfil',
+   views: {
+    'perfil': {
+     templateUrl: "pages/editar_perfil.html",
+     controller: 'PerfilController'
+   }
+ }
+
+})
+  .state('auth.notificacoes', {
+    url: '/notificacoes',
     views: {
-      'amigos': {
-        templateUrl: 'pages/amigos.html',
+      'notificacoes': {
+        templateUrl: 'pages/notificacoes.html',
         controller: 'MainController'
       }
     }
   })
+  .state('auth.search', {
+    url: '/search',
+    views: {
+      'search': {
+        templateUrl: 'pages/search.html',
+        controller: 'MainController'
+      }
+    }
+  })
+  
 
   //Paginas não logado
   .state('inicio', {
@@ -84,16 +104,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     templateUrl: "pages/noAuth/cadastrar.html",
     controller: 'CadastroController'
   })
-    .state('logar', {
+  .state('logar', {
     url: '/noAuth/entrar',
     templateUrl: "pages/noAuth/entrar.html",
     controller: 'AuthController'
   })
-      .state('confirmar', {
+  .state('confirmar', {
     url: '/noAuth/confirmar',
     templateUrl: "pages/noAuth/confirmar.html",
     controller: 'ConfirmController'
   })
+
 
   // Retonra a Route Inicial
   $urlRouterProvider.otherwise('/noAuth/inicio')

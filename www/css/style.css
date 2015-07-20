@@ -1,139 +1,139 @@
 /* Empty. Add your own CSS if you like */
 .item.item-avatar {
-	padding-top: 10px!important;
-	padding-bottom: 10px!important;
-	min-height: 56px;
+  padding-top: 10px!important;
+  padding-bottom: 10px!important;
+  min-height: 56px;
 }
 .inicio .item {
-	-webkit-animation-name: entrando;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-duration: 1s;
+  -webkit-animation-name: entrando;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 1s;
 }
 
 img {
-	top: 7px!important;
-	bottom: 5px!important;
+  top: 7px!important;
+  bottom: 5px!important;
 }
 .footer_img {
-	background: bottom;
-	overflow: hidden;
-	width: 100%; 
-	height: 62px;
+  background: bottom;
+  overflow: hidden;
+  width: 100%; 
+  height: 62px;
 }
 
 .footer_img  img{
-	-webkit-animation-name: entrando;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-duration: 1s;
-	-webkit-filter: blur(7px);
-	width: 104%;
-	margin-left: -3px;
-	margin-top: -80%!important;
+  -webkit-animation-name: entrando;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 1s;
+  -webkit-filter: blur(7px);
+  width: 104%;
+  margin-left: -3px;
+  margin-top: -80%!important;
 }
 
 .branqueia:before {
-	content: "";
-	position: absolute;
-	z-index: 1;
-	width: 100%;
-	height: 70px;
-	background-color: rgba(255, 255, 255, 0.45);
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.45);
 }
 .dados {
-	-webkit-animation-name: entrando;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease-in;
-	-webkit-animation-duration: 1s;
-	position: absolute;
-	z-index: 2;
-	margin: 13px;
+  -webkit-animation-name: entrando;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-duration: 1s;
+  position: absolute;
+  z-index: 2;
+  margin: 13px;
 }
 
 .item.item-image {
-	border-bottom: 0px;
+  border-bottom: 0px;
 }
 
 button.like {
-	padding-right: 10px;
-	border: 0px;
-	height: 38px!important;
-	min-height: 38px;
-	line-height: 38px;
-	border-radius: 4px;
-	border-bottom: 1px solid #A8A8A8;
-	color: #303030;
-	margin-right: 10px;
-	float: left;
+  padding-right: 10px;
+  border: 0px;
+  height: 38px!important;
+  min-height: 38px;
+  line-height: 38px;
+  border-radius: 4px;
+  border-bottom: 1px solid #A8A8A8;
+  color: #303030;
+  margin-right: 10px;
+  float: left;
 }
 
 .like:before {
-	margin-right: 4px;
-	line-height: 38px!important;
-	color: #303030;
+  margin-right: 4px;
+  line-height: 38px!important;
+  color: #303030;
 }
 
 .like.red span {
-	color: #cb3939;
+  color: #cb3939;
 }
 
 .like span {
-	display: inherit;
-	margin-left: 15px;
-	color: #5087d4;
-	font-weight: bold;
+  display: inherit;
+  margin-left: 15px;
+  color: #5087d4;
+  font-weight: bold;
 }
 .item h2 {
-	position: absolute;
-	color: #387EF5;
-	font-weight: bold;
-	font-size: 18px!important;
+  position: absolute;
+  color: #387EF5;
+  font-weight: bold;
+  font-size: 18px!important;
 }
 .item-avatar p {
-	float: right;
+  float: right;
 }
 
 /*Animacao entrada*/
 @-webkit-keyframes entrando {
-	0% {
-		opacity: 0;
-	}
-	60% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .comentarios p{
-	margin: 15px;
+  margin: 15px;
 }
 .comentarios p a{
-	color: #3A60A6;
-	font-weight: bold;
+  color: #3A60A6;
+  font-weight: bold;
 }
 .categorias h3{
-	color: #3A60A6;
-	margin: 15px;
-	margin-top: 15px!important;
-	margin-bottom: 0px;
-	margin-right: 0px;
-	font-size: 14px;
-	font-weight: bold;
-	display: inline-flex;
+  color: #3A60A6;
+  margin: 15px;
+  margin-top: 15px!important;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  font-size: 14px;
+  font-weight: bold;
+  display: inline-flex;
 }
 .categorias p{
-	margin: 15px 0px;
-	color: #555;
-	display: initial;
-	padding-left: 10p;
+  margin: 15px 0px;
+  color: #555;
+  display: initial;
+  padding-left: 10p;
 }
 .categorias i{
-	margin: 0px 3px;
-	font-size: 16px;
-	color: #C2C2C2;
+  margin: 0px 3px;
+  font-size: 16px;
+  color: #C2C2C2;
 }
 .categorias a {
     margin-left: 10px;
@@ -176,13 +176,14 @@ button.like {
     padding-bottom: 20px;
 }
 .foto {
-	background: #387ef5; /* Old browsers */
+  background: #2F4977; /* Old browsers */
 background: -moz-linear-gradient(top, #387ef5 0%, #005df4 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#387ef5), color-stop(100%,#005df4)); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top, #387ef5 0%,#005df4 100%); /* Chrome10+,Safari5.1+ */
 background: -o-linear-gradient(top, #387ef5 0%,#005df4 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top, #387ef5 0%,#005df4 100%); /* IE10+ */
-background: linear-gradient(to bottom, #387ef5 0%,#005df4 100%); /* W3C */
+
+  background: linear-gradient(to bottom, #2F4977 0%,#387EF5 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#387ef5', endColorstr='#005df4',GradientType=0 );
 }
 
@@ -205,19 +206,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#387ef5', end
     border: solid 1px #fff;
 }
 .personalizado {
-	background-color: rgba(0, 0, 0, 0.3);
-	border-top: 0px!important;
-	margin-top: -2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top: 0px!important;
+  margin-top: -2px;
   
   
  
-	height: auto!important;
+  height: auto!important;
   color: #FFFFFF;
   
-	display: block!important;
+  display: block!important;
   
   
-	line-height: 47px;
+  line-height: 47px;
 }
 .modalfoto {
 background: #333; /* Old browsers */
@@ -247,4 +248,82 @@ background: #333; /* Old browsers */
   background-color: rgb(166, 51, 51);
   color: #fff;
   border: none;
+}
+
+.center {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+/*NEW STYLES*/
+.profile-pic img {
+  width: 100%;
+}
+.profile-pic {
+  width: 114px;
+  overflow: hidden;
+  height: 114px;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  /* margin: 10px; */
+  box-shadow: 0 1px 8px 0 #000;
+}
+.header-profile {
+  height: 166px;
+  background-position-x: 0%;
+  background-color: #EDEDED;
+}
+span.username.ng-binding {
+  text-align: center;
+  display: block;
+  font-size: 16px;
+  margin-top: 5px;
+}
+.profile-button-custom {
+  width: 100%;
+  font-weight: bold;
+  box-shadow: 1px 4px 8px -6px #000;
+}
+.tabs.tabs-profile-options a {
+  color: black !important;
+}
+.tabs.tabs-profile-options {
+  position: relative;
+  background-color: #ccc !important;
+  color: #000 !important;
+}
+
+i.min-pic-profile img {
+  width: 100%;
+}
+i.min-pic-profile {
+  position: absolute;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  top: 5px;
+  border-radius: 5px;
+}
+.list.notificacoes-list a {
+  font-size: 11px;
+  color: #444;
+  background-color: rgb(239, 241, 245);
+  border-color: #fff;
+}
+.list.notificacoes-list i {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(56, 126, 245);
+}
+i.action-notify.icon.ion-checkmark {
+  background-color: rgb(56, 126, 245);
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  text-decoration: none !important;
+  top: 5px;
 }

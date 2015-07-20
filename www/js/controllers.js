@@ -12,7 +12,9 @@ controllers.controller('MainController', function($scope, $state, $ionicLoading,
 
 	User = Parse.User.current();
 
+	
 	if(User) {
+		console.log(User);
 		if(User.get("telefone_verificado") != 1) {
 
 			return $state.go('verificar');

@@ -7,25 +7,26 @@ navigation history that also transitions its views in and out.
 </ion-nav-bar> 
 
 
-<ion-tabs class="tabs-striped tabs-background-positive tabs-color-light " ng-controller="tabs">
+<ion-tabs class="tabs-striped tabs-background-dark tabs-color-light " ng-controller="tabs">
 
 <!-- Dashboard Tab -->
 <ion-tab title="Inicio" icon-off="ion-ios-home" icon-on="ion-ios-home" href="#/auth/inicio">
 <ion-nav-view name="inicio"></ion-nav-view>
 </ion-tab>
-
-<!-- Chats Tab -->
-<ion-tab title="Perfil" icon-off="ion-person" icon-on="ion-person" href="#/auth/perfil">
-<ion-nav-view name="perfil"></ion-nav-view>
+<ion-tab title="Search" icon-off="ion-search" icon-on="ion-search" href="#/auth/search">
+<ion-nav-view name="search"></ion-nav-view>
 </ion-tab>
-<ion-tab title="Amigos" icon-off="ion-ios-people" icon-on="ion-ios-people" href="#/auth/amigos">
-<ion-nav-view name="amigos"></ion-nav-view>
-</ion-tab>
-
-<!-- Account Tab -->
 <ion-tab icon-off="ion-android-camera personalizado" icon-on="ion-android-camera" on-select="camera()">
 <ion-nav-view name="tab-account"></ion-nav-view>
 </ion-tab>
+<ion-tab title="Amigos" icon-off="ion-information-circled" icon-on="ion-information-circled" href="#/auth/notificacoes">
+<ion-nav-view name="notificacoes"></ion-nav-view>
+</ion-tab>
+<ion-tab title="Perfil" icon-off="ion-person" icon-on="ion-person" href="#/auth/myperfil">
+<ion-nav-view name="perfil"></ion-nav-view>
+</ion-tab>
+
+<!-- Account Tab -->
 
 
 </ion-tabs>

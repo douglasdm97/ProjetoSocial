@@ -6,11 +6,12 @@ controller('VerificarController', function($scope, $state, $ionicLoading, $ionic
 	//AQUI ENVIA O SMS
 	$scope.submit = function () {
 		//AQUI VERIFICA TEM Q COLOCAR UM IF
-		alert('Confirmado com sucesso');
+		
 		User = Parse.User.current();
 		User.set("telefone_verificado", 1);
 		User.save();
 		$ionicHistory.goBack();
+		alert('Confirmado com sucesso');
 		
 	};
 });
