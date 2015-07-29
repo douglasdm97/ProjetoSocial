@@ -1,16 +1,259 @@
 /* Feito por doga10 */
 .btn-face {
-  background-color: rgb(71, 99, 158);
-  color: #fff;
-  border: none;
+	background-color: rgb(71, 99, 158);
+	color: #fff;
+	border: none;
 }
 .btn-insta {
-  background-color: #125688;
-  color: #fff;
-  border: none;
+	background-color: #125688;
+	color: #fff;
+	border: none;
 }
 .btn-google {
-  background-color: rgb(166, 51, 51);
-  color: #fff;
-  border: none;
+	background-color: rgb(166, 51, 51);
+	color: #fff;
+	border: none;
+}
+
+
+.AuthPage {
+	background: url('../img/fundo2.png');
+	background-size: cover;
+	font-family: 'OpenSans';
+}
+.AuthPage h2 {
+	color: #B6EAFF;
+	text-align: center;
+	line-height: 50px;
+	font-size: 26px;
+	margin-top: 30px;
+	font-family:  'OpenSans'!important;
+}
+
+.AuthPage .logo i {
+	font-size: 107px;
+	width: 100%;
+	line-height: 124px;
+	text-align: center;
+	color: rgb(255, 255, 255);
+}
+
+.AuthPage .block {
+	font-size: 16px;
+	text-align: center;
+	color: #fff;
+	margin-top: 60px;
+	font-family: 'OpenSans'!important;
+}
+.AuthPage .logo {
+	color: rgb(255, 255, 255);
+	text-align: center;
+	font-size: 32px;
+	font-family: 'OpenSans Light'!important;
+	margin: 45px 0px;
+	margin-bottom: 60px;
+}
+.AuthPage .button-light {
+	background-color: transparent;
+	color: #fff;
+	margin-top: 20px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+}
+.AuthPage .button-light.activated {
+	background-color: transparent;
+	color: #fff;
+	margin-top: 20px;
+	border: 2px solid #fff;
+	border-radius: 5px;
+	opacity:0.5;
+}
+
+
+/*Inputs*/
+.AuthPage .list label {
+	background-color: rgba(0, 0, 0, 0.3);
+	border: 0px;
+	height: 50px;
+}
+
+.AuthPage .list {
+	margin: 20px 25px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.botao-laranja {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ff8f05+0,ff6236+100 */
+	background: #ff8f05; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ff8f05 0%, #ff6236 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff8f05), color-stop(100%,#ff6236)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ff8f05 0%,#ff6236 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ff8f05 0%,#ff6236 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ff8f05 0%,#ff6236 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ff8f05 0%,#ff6236 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8f05', endColorstr='#ff6236',GradientType=0 ); /* IE6-9 */
+
+
+	color: #fff;
+	text-transform: uppercase;
+	font-family: "OpenSans Light";
+	border: 0px;
+	border-radius: 5px;
+	font-size: 18px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.botao-laranja:hover{
+	color: #fff;
+}
+.botao-facebook {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#4f6aa3+0,3c5a98+100 */
+	background: #4f6aa3; /* Old browsers */
+	background: -moz-linear-gradient(top,  #4f6aa3 0%, #3c5a98 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#4f6aa3), color-stop(100%,#3c5a98)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #4f6aa3 0%,#3c5a98 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #4f6aa3 0%,#3c5a98 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #4f6aa3 0%,#3c5a98 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #4f6aa3 0%,#3c5a98 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f6aa3', endColorstr='#3c5a98',GradientType=0 ); /* IE6-9 */
+
+	color: #fff;
+	font-family: "OpenSans Light";
+	border: 0px;
+	border-radius: 5px;
+	font-size: 17px;
+	text-align: center;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.botao-facebook:hover{
+	color: #fff;
+}
+.padding {
+
+	margin: 15px;
+	
+
+	margin-top: 5px!important;
+	
+
+	padding-top: 0px;
+
+	margin-bottom: 0px;
+
+}
+.botao-facebook i {
+	float: left;
+	margin-left: 15px;
+	margin-right: -22px;
+	font-size: 22px;
+}
+
+.botao-facebook i:before {
+	font-size: 26px!important;
+}
+.botao-facebook b {
+	font-family: 'OpenSans';
+	
+}
+.fixedbottom {
+	margin-top: 0px;
+	margin: 15px;
+	color: rgb(255, 255, 255);
+	text-align: center!important;
+	font-family: 'OpenSans Light';
+	margin-top: 0px;
+}
+.fixedbottom a {
+	font-family: 'OpenSans Bold';
+	padding-left: 15px;
+	color: #FFB153;
+}
+.AuthPage .list label i {
+	font-size: 26px;
+	padding-left: 5px;
+	padding-right: 15px;
+	color: rgba(142, 142, 142, 0.66);
+}
+
+.AuthPage .list input {
+	color: #fff;
+	font-size: 16px;
+	font-family: 'OpenSans Light';
+	line-height: 34px;
+}
+
+.AuthPage .list input::-webkit-input-placeholder {
+	color: #fff;
+
+}
+
+.AuthPage .list input:-moz-placeholder {
+	color: #fff;
+
+}
+
+.AuthPage .list input::-moz-placeholder {
+	color: #fff;  
+
+}
+
+.AuthPage .list input:-ms-input-placeholder {  
+	color: #fff;  
+
+}
+.CadastroPage .list label {
+	background-color: rgba(56, 56, 56, 0.64);
+}
+
+.CadastroPage .list {
+	margin: 30px 10px;
+	margin-bottom: 10px;
+}
+
+.CadastroPage .padding {
+	margin: 0px;
+}
+
+.bar-personaliza {
+	background-color: #475166!important;
+}
+
+
+.CadastroPage h5 {
+	font-size: 14px;
+	font-family: 'OpenSans Light';
+	text-align: center;
+	color: #fff;
+	line-height: 22px;
+	margin-bottom: -10px!important;
+	margin-top: 30px;
+}
+.CadastroPage .list input {
+	padding-left: 10px;
+	font-size: 14px;
+}
+.CadastroPage .list label {
+	border-bottom: 1px solid #547ED6;
+}
+
+.CadastroPage .list label:last-child {
+	border-bottom: 0px;
+}
+
+
+
+@media only screen and (max-height: 510px)
+{
+	.logo {
+		margin-top: 20px!important;
+		
+		margin-bottom: 30px!important;
+	}
+	.AuthPage .logo i {
+		line-height: 95px;
+		font-size: 85px;
+	}
+
+	.AuthPage .logo {
+		font-size: 25px;
+	}
 }

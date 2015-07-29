@@ -1,24 +1,36 @@
-<ion-view name="content" title="Inicio" hide-back-button="true">
+<ion-view hide-nav-bar="true">
 
-<ion-content class="main-page home-bg content-bg overlay-content" scroll="true">
-<div class="logo">
+<ion-content class="AuthPage">
+<div class="logo"><i class="ion ion-ios-analytics"></i>Projeto Social</div>
+
+<div class="list">
+	<label class="item item-input username">
+		<i class="icon ion-ios-email"></i>
+		<input type="text" placeholder="Email" ng-model="username">
+	</label>
+
+	<label class="item item-input lock">
+		<i class="icon ion-ios-locked"></i>
+		<input type="password" placeholder="Senha" ng-model="password">
+	</label>
 </div>
 
-<div class="slogan">
-	<p>
-		Mudança Social
-	</p>
+<div class="padding">
+	<button class="button button-full botao-laranja" ng-click="entrar(username, password)">
+		Entrar
+	</button>
+
+
+	<button class="button button-full botao-facebook" ng-click="facebook()">
+	<i class="icon ion-social-facebook"></i>
+		Entrar com <b>facebook</b>
+	</button>
+
 </div>
-<button class="button button-blue" ng-click="Redirect('logar')">
-	Entrar
-</button>
 
-<button class="button button-blue" ng-click="Redirect('cadastrar')">
-	Cadastrar
-</button>
-
-
-
+<div class="fixedbottom">
+	Ainda não possui conta? <a ng-click="RedirectState('cadastrar')">Cadastre-se</a>
+</div>
 
 </ion-content>
 

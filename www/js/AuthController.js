@@ -6,21 +6,28 @@ controller('AuthController', function($scope, $state, $ionicLoading, $ionicModal
 	Parse.initialize("DGGAyXG486w5hxkzdlX38yqbqfnKb9gywUXGFunJ", "WaKyF5ZAxo9zkieeDENUPxPlXKQd9CBCZtc6VRPW");
 
 //Entrar com o parse
-$scope.entrar = function (username, password) {
-	if (!username) {$scope.showAlert('Por favor Informe o seu usuario!');return false;};
+$scope.entrar = function (email, password) {
+	if (!email) {$scope.showAlert('Por favor Informe o seu email!');return false;};
 	if (!password) {$scope.showAlert('Por favor Informe a sua senha!');return false;};
 
 	$ionicLoading.show();
-	Parse.User.logIn(username, password, {
+
+
+
+	Parse.User.logIn(email, password, {
 		success: function(user) {
 			$ionicLoading.hide();
 			return $state.go('auth.inicio');
 		},
 		error: function(user, error) {
 			$ionicLoading.hide();
-			$scope.showAlert('usuario ou senha errados!');
+			$scope.showAlert('E-mail ou senha incorretos.');
 		}
 	});
+
+	// Parse.User.logIn(username, password, {
+		
+	// });
 };
 //Alert
 $scope.showAlert = function(error,cod) {
@@ -37,8 +44,7 @@ $scope.showAlert = function(error,cod) {
 
 		$ionicLoading.show();
 		// Reliza Login com o  Facebook
-		facebookConnectPlugin.login(['email'], function(response) {
-		});
+	
 		//Pega o Status do Login
 		facebookConnectPlugin.getLoginStatus( 
 			function (response) { 

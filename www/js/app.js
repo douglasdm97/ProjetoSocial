@@ -97,26 +97,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   .state('inicio', {
     url: '/noAuth/inicio',
     templateUrl: "pages/noAuth/inicio.html",
-    controller: 'NoAuthController'
+    controller: 'AuthController'
   })
   .state('cadastrar', {
     url: '/noAuth/cadastrar',
     templateUrl: "pages/noAuth/cadastrar.html",
     controller: 'CadastroController'
   })
-  .state('logar', {
-    url: '/noAuth/entrar',
-    templateUrl: "pages/noAuth/entrar.html",
-    controller: 'AuthController'
-  })
+
   .state('confirmar', {
     url: '/noAuth/confirmar',
     templateUrl: "pages/noAuth/confirmar.html",
     controller: 'ConfirmController'
-  })
+  });
 
 
-  // Retonra a Route Inicial
-  $urlRouterProvider.otherwise('/noAuth/inicio')
+  Parse.initialize("DGGAyXG486w5hxkzdlX38yqbqfnKb9gywUXGFunJ", "WaKyF5ZAxo9zkieeDENUPxPlXKQd9CBCZtc6VRPW");
+
+  
+  var currentUser = Parse.User.current();
+  console.log(currentUser);
+  if (currentUser) {
+  // Retonra a Route 
+  $urlRouterProvider.otherwise('/auth/inicio')
+} else {
+   // Retonra a Route 
+   $urlRouterProvider.otherwise('/noAuth/inicio');
+ }
+
+
 
 });

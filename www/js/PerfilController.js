@@ -16,8 +16,7 @@ var testefile='' ;
 	}
 	}
 
-	$scope.username = User.get("username");
-	$scope.nome = User.get("nome");
+	$scope.nickname = User.get("nickname");
 	$scope.email = User.get("email");
 	$scope.refreshprofilepic();
 
@@ -25,9 +24,8 @@ var testefile='' ;
 
 
 
-	$scope.submit = function (username, nome, email) {
-		User.set('username', username);
-		User.set('nome', nome);
+	$scope.submit = function (nickname, email) {
+		User.set('nickname', nickname);
 		User.set('email', email);
 		User.save(null, {
 			success: function (){
