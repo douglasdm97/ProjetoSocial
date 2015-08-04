@@ -16,8 +16,7 @@ var testefile='' ;
 	}
 	}
 
-	$scope.username = User.get("username");
-	$scope.nome = User.get("nome");
+	$scope.nickname = User.get("nickname");
 	$scope.email = User.get("email");
 	$scope.refreshprofilepic();
 
@@ -25,9 +24,8 @@ var testefile='' ;
 
 
 
-	$scope.submit = function (username, nome, email) {
-		User.set('username', username);
-		User.set('nome', nome);
+	$scope.submit = function (nickname, email) {
+		User.set('nickname', nickname);
 		User.set('email', email);
 		User.save(null, {
 			success: function (){
@@ -46,7 +44,7 @@ var testefile='' ;
 
     $scope.uploadImage = function () {
     	$ionicLoading.show();
-       
+
     	var fileUploadControl = $("#pic_file")[0];
 
     	if (fileUploadControl.files.length > 0) {
@@ -63,7 +61,7 @@ var testefile='' ;
 
 		  console.log(testefile);
 		  var name = testefile.name;
-		  
+
 
 		  var parseFile = new Parse.File(name, file);
 
@@ -91,8 +89,10 @@ var testefile='' ;
 
 
 	$scope.sair = function () {
+		
 		Parse.User.logOut();
 		return $state.go('inicio');
+		facebookConnectPlugin.logout();
 	};
 	$scope.page = function (local) {
 

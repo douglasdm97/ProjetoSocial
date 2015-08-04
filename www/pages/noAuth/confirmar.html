@@ -1,8 +1,11 @@
-<ion-view title="Mais alguns dados">
-<ion-content class="signup-page content-bg has-header" scroll="true" >
+<ion-view title="Quase lá">
+<ion-content class="AuthPage CadastroPage" scroll="true" >
+
+<h5>Para finalizar seu cadastro via <b>facebook</b> precisamos de mais algumas informações.</h5>
+
 <div class="list">
   <label class="item item-input username">
-    <input type="text" placeholder="@username" ng-model="username">
+    <input type="text" placeholder="username" ng-model="username">
   </label>
 
   <label class="item item-input email">
@@ -14,13 +17,14 @@
   </label>
 
   <label class="item item-input telephone">
-    <input type="text" placeholder="Celular" ng-model="celular">
+    <input id="celular" type="text" placeholder="Celular" ng-model="celular">
   </label>
 </div>
-
-<button class="button button-blue" ng-click="cadastro(username, password, email,celular)">
-  Cadastrar
+<div class="padding">
+<button class="button button-full botao-laranja" ng-click="cadastro(username, password, email)">
+  Finalizar Cadastro
 </button>
+</div>
 
 
 
@@ -28,3 +32,6 @@
 
 </ion-content>
 </ion-view>
+
+
+
