@@ -109,6 +109,11 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/noAuth/confirmar',
     templateUrl: "pages/noAuth/confirmar.html",
     controller: 'ConfirmController'
+  })
+  .state('associar', {
+    url: '/noAuth/associar',
+    templateUrl: "pages/noAuth/associar.html",
+    controller: 'ConfirmController'
   });
 
 

@@ -3,6 +3,7 @@ controllers.
 controller('CadastroController', function($scope, $state, $ionicLoading, $ionicModal, $ionicPopup) {
 	Parse.initialize("DGGAyXG486w5hxkzdlX38yqbqfnKb9gywUXGFunJ", "WaKyF5ZAxo9zkieeDENUPxPlXKQd9CBCZtc6VRPW");
 
+	Parse.User.logOut();
 	
 	var user = new Parse.User();
 	

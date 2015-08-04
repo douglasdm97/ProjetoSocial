@@ -44,7 +44,7 @@ var testefile='' ;
 
     $scope.uploadImage = function () {
     	$ionicLoading.show();
-       
+
     	var fileUploadControl = $("#pic_file")[0];
 
     	if (fileUploadControl.files.length > 0) {
@@ -61,7 +61,7 @@ var testefile='' ;
 
 		  console.log(testefile);
 		  var name = testefile.name;
-		  
+
 
 		  var parseFile = new Parse.File(name, file);
 
@@ -89,8 +89,10 @@ var testefile='' ;
 
 
 	$scope.sair = function () {
+		
 		Parse.User.logOut();
 		return $state.go('inicio');
+		facebookConnectPlugin.logout();
 	};
 	$scope.page = function (local) {
 

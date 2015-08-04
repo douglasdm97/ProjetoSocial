@@ -84,14 +84,73 @@ controller('ConfirmController', function($scope, $state, $ionicLoading, $ionicMo
 
 
 		};
-		$scope.showAlert = function(error,cod) {
-			var alertPopup = $ionicPopup.alert({
-				template: error
-			});
-			alertPopup.then(function(res) {
-				
-			});
-		};
+		
 	}
+	$scope.showAlert = function(error,cod) {
+		var alertPopup = $ionicPopup.alert({
+			template: error
+		});
+		alertPopup.then(function(res) {
+
+		});
+	};
+	$scope.associar = function (password) {
+		if (!password) {$scope.showAlert('Por favor Informe a sua senha!');return false;};
+
+		facebookConnectPlugin.api( "me/?fields=id,email", ["user_birthday"],
+			function (dados) {
+			
+
+				username =	dados.email;
+
+				Parse.User.logIn(username, password, {
+					success: function(user) {
+						facebookConnectPlugin.getLoginStatus( 
+							function (response) { 
+
+
+								user.set("completo_facebook", 1);
+
+								user.save();
+
+								userMain = user;
+								// Faz a Data ficar no formato perfeitoOoO
+								var data = new Date(new Date().getTime() + response['authResponse']['expiresIn'] * 1000);
+
+								Parse.FacebookUtils.link(user, {
+
+									"id": response['authResponse']['userID']+"",
+									"access_token": response['authResponse']['accessToken'],
+									"expiration_date": data
+								}, 
+								{
+									success: function(user) {
+										return $state.go('auth.inicio');
+									},
+									error: function(user, error) {
+										userMain.set("completo_facebook", 0);
+
+								userMain.save();
+										alert("Não foi possivel associar sua conta :(");
+									}
+								});
+
+
+
+
+
+
+
+							});
+					},
+					error: function(user, error) {
+						$ionicLoading.hide();
+						$scope.showAlert('Senha incorreta.');
+					}
+				});
+
+			});
+};
+
 	//Final do IF
 });
