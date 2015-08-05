@@ -27,7 +27,8 @@
         "APP_ID": "1625088031103156",
         "APP_NAME": "ProjetoSocial"
       }
-    }
+    },
+    "cordova-plugin-media-capture"
   ],
   "cordovaPlatforms": [
     "android"

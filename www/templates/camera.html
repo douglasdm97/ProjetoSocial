@@ -1,31 +1,123 @@
-<ion-modal-view>
+<ion-modal-view ng-controller="CreatePostController">
 <ion-header-bar class="bar-dark">
 <div class="buttons">
 
 	<button ng-click="myGoBack()" class="button button-clear button-icon icon ion-close-round button-light"></button>
 </div>
-<h1 class="title">Enviar Foto</h1>
+
 </ion-header-bar>
-<ion-content class="modalfoto">
-<img style="width:100%" src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11377538_1601810536741533_1962895443_n.jpg" />
-<div class="padding">
-	<button class="button icon-left ion-location">Pegar localização</button>
-</div>
-<ul class="list pretinha">
+<ion-content class="modalfoto" >
 
-	<li class="item item-checkbox" ng-repeat="i in [1,2,3,4,5]">
-		<label class="checkbox">
-			<input type="checkbox">
-		</label>
-		Categoria
-	</li>
+<div class="card card-take-a-post">
+  <div class="item item-divider">
+   
+  </div>
+  <div class="item item-text-wrap">
+
+    <div class="item item-image">
+    <button ng-model='myimage' ng-click='getApic()' ng-hide="myimage" class="button button-getpic icon-center ion-camera"></button>
+    <img ng-show="myimage" id="myImage" src="img/photo1.jpg">
+  </div>
+   
+   <div class="item">
+   	
+	<div class="localizacao">
+		{{formated_adress}}
+	</div>
+
+   </div>
+	
+
+	<div class="item">
+   	
+	<div class="categorias" ng-show="myimage">
+		<div class="list-categoria-1">
+		<ul class="list">
+
+		  <li class="item item-checkbox">
+		     <label class="checkbox">
+		       <input ng-model='categoria1' type="checkbox">
+		     </label>
+		    Natureza
+		  </li>
+
+		  <ul ng-show='categoria1' class="list">
+				   <li class="item item-checkbox">
+				     <label class="checkbox">
+				       <input ng-model='sucategoria1' value="Lago" type="checkbox">
+				     </label>
+				    Lago
+				  </li>
+
+				   <li class="item item-checkbox">
+				     <label class="checkbox">
+				       <input ng-model='sucategoria2'  value="Cachoeira"  type="checkbox">
+				     </label>
+				    Cachoeira
+				  </li>
+
+				   <li class="item item-checkbox">
+				     <label class="checkbox">
+				       <input ng-model='sucategoria3'  value="Mato"  type="checkbox">
+				     </label>
+				    Mato
+				  </li>
+
+		  	</ul>
 
 
+		 
+
+		</ul>
+			 
+	   		
+	   	</div>
+
+	</div>
+
+   </div>
+	
+
+
+  </div>
+
+   <div ng-show="myimage" class="item item-text-wrap">
+  
+	<ul class="list">
+
+  <li class="item item-toggle">
+   FACEBOOK
+     <label class="toggle toggle-positive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+    <li class="item item-toggle">
+   TWITTER
+     <label class="toggle toggle-positive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+  <li class="item item-toggle">
+   INSTAGRAM
+     <label class="toggle toggle-positive">
+       <input type="checkbox">
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
 </ul>
-<div class="padding">
-	<button class="button button-full button-dark">
-		Enviar
-	</button>
+
+
+  </div>
+  <div class="item item-divider">
+   <a  class="button button-full icon-right ion-chevron-right button-positive" ng-show="myimage">Postar</a>
+  </div>
 </div>
-</ion-content>
 </ion-modal-view>

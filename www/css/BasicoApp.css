@@ -272,3 +272,18 @@
   color: #fff;
   border: none;
 }
+
+
+.card.card-take-a-post {
+    background-color: transparent !important;
+}
+
+.card.card-take-a-post .item {
+    background-color: rgba(251, 249, 249, 0.74) !important;
+}
+
+
+img#myImage {
+    box-shadow: 0 0 15px -3px #000;
+    width: 100%;
+}

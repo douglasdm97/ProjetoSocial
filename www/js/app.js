@@ -2,7 +2,7 @@
 
 
 
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ui.router'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','ngCordova', 'ui.router'])
 
 
 .run(function($ionicPlatform) {

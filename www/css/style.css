@@ -334,5 +334,28 @@ i.action-notify.icon.ion-checkmark {
   display: none;
 }
 
+.button-getpic {
+    margin: 40px;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 23px;
+    border-radius: 60px;
+    box-shadow: 0 0 4px 1px #000;
+    border: none;
+}
+.button-getpic {
+    margin: 40px;
+    background-color: rgba(51, 51, 51, 0.21);
+    color: #333;
+    padding: 12px 23px;
+    border-radius: 60px;
+    box-shadow: 0 0 4px 1px #000;
+    border: none;
+    font-size: 49px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+
 
 /*FIM 19/07/2015*/
