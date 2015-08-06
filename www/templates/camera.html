@@ -22,7 +22,7 @@
    <div class="item">
    	
 	<div class="localizacao">
-		{{formated_adress}}
+		<span class="ion-icon ion-location"></span> {{formated_adress}}
 	</div>
 
    </div>
@@ -34,36 +34,106 @@
 		<div class="list-categoria-1">
 		<ul class="list">
 
-		  <li class="item item-checkbox">
-		     <label class="checkbox">
-		       <input ng-model='categoria1' type="checkbox">
-		     </label>
-		    Natureza
-		  </li>
 
-		  <ul ng-show='categoria1' class="list">
-				   <li class="item item-checkbox">
-				     <label class="checkbox">
-				       <input ng-model='sucategoria1' value="Lago" type="checkbox">
-				     </label>
-				    Lago
-				  </li>
 
-				   <li class="item item-checkbox">
-				     <label class="checkbox">
-				       <input ng-model='sucategoria2'  value="Cachoeira"  type="checkbox">
-				     </label>
-				    Cachoeira
-				  </li>
+		  <label  class="item item-radio">
+		    <input ng-model="categoria1" value="Natureza" type="radio" name="categoria">
+		    <div class="item-content">
+		      Natureza
+		    </div>
+		    <i class="radio-icon ion-checkmark"></i>
+		  </label>
 
-				   <li class="item item-checkbox">
-				     <label class="checkbox">
-				       <input ng-model='sucategoria3'  value="Mato"  type="checkbox">
-				     </label>
-				    Mato
-				  </li>
+
+		  <ul ng-show='categoria1 == "Natureza" ' class="list">
+				   <label  class="item item-radio">
+				    <input ng-model='subcat1' type="radio" name="subcat1">
+				    <div class="item-content">
+				      sub a1
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
+
+				   <label  class="item item-radio">
+				    <input ng-model='subcat1' type="radio" name="subcat1">
+				    <div class="item-content">
+				      sub a2
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
+
+				   <label  class="item item-radio">
+				    <input ng-model='subcat1' type="radio" name="subcat1">
+				    <div class="item-content">
+				      sub a3
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
+
+				   <label  class="item item-radio">
+				    <input ng-model='subcat1' type="radio" name="subcat1">
+				    <div class="item-content">
+				      sub a4
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
 
 		  	</ul>
+
+
+
+		 
+
+		</ul>
+
+				<ul class="list">
+
+
+
+		  <label  class="item item-radio">
+		    <input ng-model="categoria1" value="Cidade" type="radio" name="categoria">
+		    <div class="item-content">
+		      Cidade
+		    </div>
+		    <i class="radio-icon ion-checkmark"></i>
+		  </label>
+
+
+		  <ul ng-show='categoria1 == "Cidade"' class="list">
+				   <label  class="item item-radio">
+				    <input ng-model='subcat2' type="radio" name="subcat2">
+				    <div class="item-content">
+				      sub a1
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
+
+				   <label  class="item item-radio">
+				    <input ng-model='subcat2' type="radio" name="subcat2">
+				    <div class="item-content">
+				      sub a2
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
+
+				   <label  class="item item-radio">
+				    <input ng-model='subcat2' type="radio" name="subcat2">
+				    <div class="item-content">
+				      sub a3
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
+
+				   <label  class="item item-radio">
+				    <input ng-model='subcat2' type="radio" name="subcat2">
+				    <div class="item-content">
+				      sub a4
+				    </div>
+				    <i class="radio-icon ion-checkmark"></i>
+				  </label>
+
+		  	</ul>
+		  	
 
 
 		 
@@ -94,7 +164,7 @@
        </div>
      </label>
   </li>
-    <li class="item item-toggle">
+<!--     <li class="item item-toggle">
    TWITTER
      <label class="toggle toggle-positive">
        <input type="checkbox">
@@ -102,7 +172,7 @@
          <div class="handle"></div>
        </div>
      </label>
-  </li>
+  </li> -->
   <li class="item item-toggle">
    INSTAGRAM
      <label class="toggle toggle-positive">

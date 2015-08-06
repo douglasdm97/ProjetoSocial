@@ -1,5 +1,5 @@
 controllers.
-controller('CreatePostController', function($scope,$http, $state, $ionicLoading, $ionicModal, $ionicPopup,$cordovaCamera,$cordovaGeolocation) {
+controller('CreatePostController', function($scope,$http, $state, $ionicLoading, $ionicModal, $ionicPopup,$cordovaCamera,$cordovaGeolocation,$cordovaSocialSharing,$cordovaInstagram) {
 
 
 $scope.getPosition = function ()
@@ -22,35 +22,44 @@ $.getJSON('http://maps.google.com/maps/api/geocode/json?address='+lat+','+lon+'&
     /*optional stuff to do after success */
 
         console.log(json.results[1]);
+        if (json.results[1].formatted_address) {
+           $scope.formated_adress = json.results[1].formatted_address
+         }else{
+           $scope.formated_adress = "Cordenadas: "+lat+lon;
+         }
 
-        $scope.formated_adress = json.results[1].formatted_address
+       
 });
 
 
 }
 
 
-$scope.to64 = function(url, callback, outputFormat) 
+$scope.faceShare = function()
 {
-  var canvas = document.createElement('CANVAS'),
-        ctx = canvas.getContext('2d'),
-        img = new Image;
-    img.crossOrigin = 'Anonymous';
-    img.onload = function(){
-        var dataURL;
-        canvas.height = img.height;
-        canvas.width = img.width;
-        ctx.drawImage(img, 600, 600);
-        dataURL = canvas.toDataURL(outputFormat);
-        callback.call(this, dataURL);
-        canvas = null; 
-    };
-    img.src = url;
+  window.plugins.socialsharing.shareViaFacebook($scope.postCaptiom,$scope.postimg, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)});
+}
+
+$scope.instaShare = function()
+{
+   $cordovaInstagram.share($scope.postimg, $scope.postCaptiom).then(function() {
+    // Worked
+  }, function(err) {
+    // Didn't work
+  });
+}
+$scope.twitter = function ()
+{
+    $cordovaSocialSharing
+    .shareViaTwitter($scope.postCaptiom, $scope.postimg, null)
+    .then(function(result) {
+      // Success!
+    }, function(err) {
+      // An error occurred. Show a message to the user
+    });
 }
 
 
-
-var img64 = $scope.to64('img/photo1.jpg','','png');
 $scope.getApic = function ()
 {
 
@@ -62,7 +71,7 @@ $scope.myimage=1;
       sourceType: Camera.PictureSourceType.CAMERA,
       allowEdit: false,
       encodingType: Camera.EncodingType.PNG,
-      targetWidth: 600,
+      targetWidth: 800,
       targetHeight: 600,
       popoverOptions: CameraPopoverOptions,
       saveToPhotoAlbum: false,
@@ -74,6 +83,7 @@ $scope.myimage=1;
        $cordovaCamera.getPicture(options).then(function(imageData) {
       var image = document.getElementById('myImage');
       image.src = "data:image/jpeg;base64," + imageData;
+      $scope.postimg = "data:image/jpeg;base64," + imageData;
       // $scop.imgpost =  image.src;
     }, function(err) {
       // error

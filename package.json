@@ -28,7 +28,11 @@
         "APP_NAME": "ProjetoSocial"
       }
     },
-    "cordova-plugin-media-capture"
+    "cordova-plugin-media-capture",
+    {
+      "locator": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git",
+      "id": "nl.x-services.plugins.socialsharing"
+    }
   ],
   "cordovaPlatforms": [
     "android"
