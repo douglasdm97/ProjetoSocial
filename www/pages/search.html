@@ -9,7 +9,11 @@
 
 
 <div class="list">
-
+<p style="line-height:50px; text-align:center" ng-hide="valorbusca.length > 3">Digite acima</p>
+<div ng-show="valorbusca.length > 3">
+<p style="line-height:50px; text-align:center" ng-show="numero">Nenhum resultado</p>
+<p style="line-height:50px; text-align:center" ng-show="seminternet">Verifique sua conexão.</p>
+</div>
     <a ng-repeat="resultado in dados" class="item item-avatar" href="#/auth/profile/{{resultado.id}}">
       <img src="{{verificarfoto(resultado.profile_pic)}}">
       <h2>{{ resultado.nickname }}</h2>

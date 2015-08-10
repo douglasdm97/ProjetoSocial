@@ -17,11 +17,19 @@ controller('BuscarController', function($scope, $state, $ionicLoading, $ionicMod
 			userquery.limit(20);
 			userquery.find({
 				success: function(resultados) {
+					$scope.seminternet = false;
 					resultados = JSON.stringify(resultados); 
 					resultados =JSON.parse(resultados); 
 					$scope.dados = resultados;
+					if(resultados.length > 0) {
+						$scope.numero = false;
+					}else {
+						$scope.numero = true;
+					}
+
 				}, error: function(error) {
-					$scope.showAlert('Sem conexão ao banco de dados.');
+						$scope.numero = false;
+						$scope.seminternet = true;
 				}
 			});
 		}else {
