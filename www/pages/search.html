@@ -1,14 +1,19 @@
 <ion-view view-title="Buscar">
+<ion-header-bar class="bar bar-header item-input-inset bar-subheader bar-positive">
+<label class="item-input-wrapper">
+	<i class="icon ion-ios7-search placeholder-icon"></i>
+	<input ng-model="valorbusca" ng-keyup="searchnow(valorbusca)" type="search" placeholder="Buscar">
+</label>
+</ion-header-bar>
 <ion-content>
-<div class="sub-header"></div>
 
 
 <div class="list">
 
-    <a ng-repeat="i in [1,2,3,4,5]" class="item item-avatar" href="#/auth/profile/nNuPZcMr0c">
-      <img src="https://igcdn-photos-f-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/11377538_1601810536741533_1962895443_n.jpg">
-      <h2>Douglas</h2>
-      <p>@doga10</p>
+    <a ng-repeat="resultado in dados" class="item item-avatar" href="#/auth/profile/{{resultado.id}}">
+      <img src="{{verificarfoto(resultado.profile_pic)}}">
+      <h2>{{ resultado.nickname }}</h2>
+
     </a>
 
 </div>

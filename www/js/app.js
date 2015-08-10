@@ -96,7 +96,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
     views: {
       'search': {
         templateUrl: 'pages/search.html',
-        controller: 'MainController'
+        controller: 'BuscarController'
       }
     }
   })
