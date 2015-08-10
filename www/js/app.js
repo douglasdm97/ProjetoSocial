@@ -63,6 +63,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','n
       }
     }
   })
+  .state('auth.profile', {
+    url: '/profile/:id',
+    views: {
+      'search': {
+        templateUrl: 'pages/profile.html',
+        controller: 'ProfileController'
+      }
+    }
+  })
   .state('auth.editar_perfil', {
    url: '/editar_perfil',
    views: {

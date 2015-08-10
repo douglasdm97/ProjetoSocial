@@ -1,0 +1,53 @@
+<ion-view view-title="Perfil">
+
+<ion-content >
+<div class="header-profile"> 
+	<div class="row">
+		<div class="col col-33">
+			<div class="profile-pic">
+				<img src="{{pic_file}}" alt="">
+			</div>
+			<span class="username">{{nickname}}</span>
+
+		</div>
+		<div class="col col-66">
+			<div class="row">
+				<div class="verticallist">
+					<div class="list-profile-stats">
+
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="center">
+					<button ng-show="btnSeguir" ng-click="seguir(json.id)" class="button button-small button-light medium-gray profile-button-custom">
+						Seguir
+					</button>
+					<button ng-show="btnDeixarSeguir" ng-click="deixarSeguir(json.id)" class="button button-small button-light medium-gray profile-button-custom">
+						Deixar de Seguir
+					</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="profile-menu-wrapper">
+	<div class="tabs tabs-profile-options">
+		<a class="tab-item">
+			<i class="icon ion-grid"></i>
+		</a>
+		<a class="tab-item">
+			<i class="icon ion-happy-outline"></i>
+		</a>
+		<a class="tab-item">
+			<i class="icon ion-sad-outline"></i>
+		</a>
+	</div>
+	
+
+</div>
+</ion-content>
+</ion-view>

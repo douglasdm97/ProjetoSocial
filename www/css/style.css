@@ -1,4 +1,7 @@
 /* Empty. Add your own CSS if you like */
+.tabs-profile-options .tab-item i {
+    color: #fff;
+}
 .item.item-avatar {
   padding-top: 10px!important;
   padding-bottom: 10px!important;
@@ -79,7 +82,7 @@ button.like {
 }
 
 .like span {
-  display: inherit;
+  display: inline;
   margin-left: 15px;
   color: #5087d4;
   font-weight: bold;
@@ -290,8 +293,10 @@ span.username.ng-binding {
 }
 .tabs.tabs-profile-options {
   position: relative;
-  background-color: #ccc !important;
+  background-color: #2180E8 !important;
+  border-bottom: #25507E 2px solid;
   color: #000 !important;
+  line-height: 48px;
 }
 
 i.min-pic-profile img {
