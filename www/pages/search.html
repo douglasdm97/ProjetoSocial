@@ -14,7 +14,7 @@
 <p style="line-height:50px; text-align:center" ng-show="numero">Nenhum resultado</p>
 <p style="line-height:50px; text-align:center" ng-show="seminternet">Verifique sua conexão.</p>
 </div>
-    <a ng-repeat="resultado in dados" class="item item-avatar" href="#/auth/profile/{{resultado.id}}">
+    <a ng-repeat="resultado in dados" class="item item-avatar" href="#/auth/profile/{{resultado.objectId}}">
       <img src="{{verificarfoto(resultado.profile_pic)}}">
       <h2>{{ resultado.nickname }}</h2>
 
