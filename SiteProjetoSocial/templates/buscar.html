@@ -1,0 +1,26 @@
+<md-dialog style="    max-width: 650px;
+    width: 100%;
+    height: 280px;
+    background-color: transparent;
+    box-shadow: 0px 0px 0px!important;
+    margin-top: 0px!important;
+    overflow: hidden;">
+
+<md-autocomplete
+md-search-text="campo"
+md-items="resultados in searchnow(campo).then(retorna)"
+ md-selected-item-change="entrarperfil(resultados)"
+placeholder="Digite o Nickname de quem procura">
+<md-item-template class="md-3-line">
+<span class="item-title">
+<img src="{{verificarfoto(resultados.profile_pic)}}"></img>
+  <span> {{ resultados.nickname }} </span>
+</span>
+
+</md-item-template>
+<md-not-found>
+Nenhum usuário encontrado
+</md-not-found>
+</md-autocomplete>
+
+</md-dialog>

@@ -1,0 +1,22 @@
+
+<md-card>
+
+<md-toolbar class="md-tall md-hue-2">
+<span flex></span>
+<div layout="column" class="md-toolbar-tools-bottom inset">
+	<md-button ng-show="btnSeguir" ng-click="seguir(json.id)" style="position: absolute;right: 10px;">
+						Seguir
+					</md-button>
+					<md-button ng-show="btnDeixarSeguir" ng-click="deixarSeguir(json.id)" style="position: absolute;right: 10px;">
+						Deixar de Seguir
+					</md-button>
+
+	<img class="user-avatar" src="{{pic_file}}" />
+	
+	<div>{{nickname}}</div>
+	<div>{{email}}</div>
+</div>
+
+</md-toolbar>
+</md-card>
+
